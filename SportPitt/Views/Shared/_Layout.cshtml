@@ -37,6 +37,25 @@
                 </ul>
             </div>
         </nav>
+        <div class="jumbotron">
+            <h2 id="welcome-text" style="display:none; position: absolute; bottom: 250px; right: 50px; z-index: 1;">Welcome</h2>
+            <img id="animated-image" style="display:none; position: absolute; bottom: 0; right: 0; z-index: 0;" src="~/images/giphy.gif" alt="Animated GIF">
+        </div>
+
+        <script>
+            setTimeout(function () {
+                document.getElementById("animated-image").style.display = "block";
+                document.getElementById("welcome-text").style.display = "block";
+            }, 2000);
+            setTimeout(function () {
+                document.getElementById("animated-image").style.display = "none";
+                document.getElementById("welcome-text").style.display = "none";
+            }, 15000);
+            setTimeout(function () {
+                document.getElementById("animated-image").style.display = "block";
+                document.getElementById("welcome-text").style.display = "block";
+            }, 25000);
+        </script>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
