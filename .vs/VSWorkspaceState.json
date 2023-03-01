@@ -2,11 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\SportPitt",
-    "\\SportPitt\\App_Start",
-    "\\SportPitt\\Controllers",
     "\\SportPitt\\Views",
-    "\\SportPitt\\Views\\Home",
     "\\SportPitt\\Views\\Shared"
   ],
+  "SelectedNode": "\\SportPitt\\Views\\Shared\\_Layout.cshtml",
   "PreviewInSolutionExplorer": false
 }

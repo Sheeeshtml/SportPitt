@@ -33,30 +33,30 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
+                    <li class="mode-toggle"><a href="#">Toggle Dark/Light Mode</a></li>
+
                     </li>
                 </ul>
             </div>
         </nav>
-        <div class="jumbotron">
-            <h2 id="welcome-text" style="display:none; position: absolute; bottom: 250px; right: 50px; z-index: 1;">Welcome</h2>
-            <img id="animated-image" style="display:none; position: absolute; bottom: 0; right: 0; z-index: 0;" src="~/images/giphy.gif" alt="Animated GIF">
+        <div class="image-container">
+            <img id="animated-image" class="hidden" src="~/images/img.png" alt="Animated Image">
         </div>
 
-        <script>
-            setTimeout(function () {
-                document.getElementById("animated-image").style.display = "block";
-                document.getElementById("welcome-text").style.display = "block";
-            }, 2000);
-            setTimeout(function () {
-                document.getElementById("animated-image").style.display = "none";
-                document.getElementById("welcome-text").style.display = "none";
-            }, 15000);
-            setTimeout(function () {
-                document.getElementById("animated-image").style.display = "block";
-                document.getElementById("welcome-text").style.display = "block";
-            }, 25000);
-        </script>
     </header>
+    <script>
+        // wait 2 seconds before showing the image
+        setTimeout(function () {
+            document.getElementById('animated-image').classList.add('show');
+        }, 2000);
+
+        const modeToggle = document.querySelector('.mode-toggle');
+
+        modeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+
+    </script>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
